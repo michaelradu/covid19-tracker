@@ -1,0 +1,24 @@
+.formControl {
+    width: 100%;
+    margin-bottom: 30px !important;
+    box-shadow: 0 10px 35px rgb(0 0 0 / 10%);
+    background-color: #1e1e30!important;
+    
+}
+
+.NativeSelect{
+    margin: .75rem;
+}
+
+@media(min-width: 720px) {
+    .formControl {
+        width: 30%;
+    }
+}
+
+.text {
+    margin-top: 30px !important;
+    color: #6c757d;
+    font-size: .75rem !important;
+    margin-bottom: 1rem !important;
+}
