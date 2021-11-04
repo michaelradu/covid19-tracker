@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { fetchDailyData } from '../../api';
-// import { Line, Bar } from 'react-chartjs-2';
-import { Bar } from 'react-chartjs-2';
+import { Line, Bar } from 'react-chartjs-2';
 
 import { Typography } from '@material-ui/core';
 import styles from './Chart.module.css'
@@ -17,28 +16,28 @@ const Chart = ({data: {confirmed, deaths, recovered}, country}) => {
         fetchAPI();
 
     }, [])
-
-    // const lineChart = (
-    //     dailyData.length
-    //     ? (
-    //     <Line
-    //         data={{
-    //             labels: dailyData.map(({ date }) => date),
-    //             datasets: [{
-    //                 data: dailyData.map(({confirmed}) => confirmed),
-    //                 label: 'Infected',
-    //                 borderColor: '#3333ff',
-    //                 fill: true,
-    //             }, {
-    //                 data: dailyData.map(({deaths}) => deaths),
-    //                 label: 'Deaths',
-    //                 borderColor: '#red',
-    //                 backgroundColor: 'rgba(255,0,0,0.5',
-    //                 fill: true,
-    //             }],
-    //         }}
-    //     />) : null
-    // )
+// eslint-disable-next-line
+    const lineChart = (
+        dailyData.length
+        ? (
+        <Line
+            data={{
+                labels: dailyData.map(({ date }) => date),
+                datasets: [{
+                    data: dailyData.map(({confirmed}) => confirmed),
+                    label: 'Infected',
+                    borderColor: '#3333ff',
+                    fill: true,
+                }, {
+                    data: dailyData.map(({deaths}) => deaths),
+                    label: 'Deaths',
+                    borderColor: '#red',
+                    backgroundColor: 'rgba(255,0,0,0.5',
+                    fill: true,
+                }],
+            }}
+        />) : null
+    )
 
     const barChart = (
         confirmed
